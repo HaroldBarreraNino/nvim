@@ -5,7 +5,7 @@ set showcmd
 set encoding=utf-8
 set showmatch
 set relativenumber
-set tabstop=4
+set tabstop=2
 
 call plug#begin('~/.vim/plugged')
 
@@ -43,15 +43,15 @@ Plug 'scrooloose/nerdtree'
 " Iconos
 Plug 'ryanoasis/vim-devicons'
 
-" Java formater
-Plug 'mhartington/formatter.nvim'
+" Java 
+Plug 'mfussenegger/nvim-jdtls'
 
 call plug#end()
 
 " Configuracion Gruvbox
-" set background=dark
-" let g:gruvbox_materia_background='medium'
-" colorscheme gruvbox-material
+set background=dark
+let g:gruvbox_materia_background='medium'
+colorscheme gruvbox-material
 
 " Configuracion LSP
 lua << EOF
