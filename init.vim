@@ -6,7 +6,8 @@ set encoding=utf-8
 set showmatch
 set relativenumber
 set tabstop=2
-let mapleader = "\<Space>"
+set updatetime=100
+let mapleader = " "
 
 call plug#begin('~/.vim/plugged')
 
@@ -48,11 +49,15 @@ Plug 'ryanoasis/vim-devicons'
 " Java 
 Plug 'mfussenegger/nvim-jdtls'
 
+" Github
+Plug 'mhinz/vim-signify'
+
 call plug#end()
 
 " Shortcuts personalizados
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
+nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " Configuracion Gruvbox
 set background=dark
