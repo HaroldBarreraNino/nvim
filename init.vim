@@ -6,6 +6,7 @@ set encoding=utf-8
 set showmatch
 set relativenumber
 set tabstop=2
+let mapleader = "\<Space>"
 
 call plug#begin('~/.vim/plugged')
 
@@ -21,6 +22,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " plugins para javascript
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'alvan/vim-closetag'
 
 " etiquetas html
 Plug 'alvan/vim-closetag'
@@ -48,6 +50,10 @@ Plug 'mfussenegger/nvim-jdtls'
 
 call plug#end()
 
+" Shortcuts personalizados
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
+
 " Configuracion Gruvbox
 set background=dark
 let g:gruvbox_materia_background='medium'
@@ -59,6 +65,9 @@ require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.html.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.java_language_server.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.jdtls.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.jsonls.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.angularls.setup{on_attach=require'completion'.on_attach}
 EOF
 
 " Configuracion Prettier (ctrl + d para formatear archivo)
