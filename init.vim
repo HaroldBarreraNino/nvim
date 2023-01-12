@@ -5,8 +5,11 @@ set showcmd
 set encoding=utf-8
 set showmatch
 set relativenumber
-set tabstop=2
-set updatetime=100
+set updatetime=80
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
 let mapleader = " "
 
 call plug#begin('~/.vim/plugged')
